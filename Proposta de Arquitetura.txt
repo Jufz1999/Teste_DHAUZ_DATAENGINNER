@@ -1,0 +1,44 @@
+
+Como proposta de arquitetura para esse case de forma recorrente, trago duas arquiteturas:
+
+Azure
+
+
+Amazon RDS Mysql - Origem dos dados
+
+Linkservice - Realiza a conexão com o Amazon RDS Mysql
+
+Data Factory - Pipeline de Dados para armazenar no Azure Storage Data Lake Gen 2. 
+
+Azure Storage Data Lake Gen 2 - Responsável por armazenar os dados.
+
+Sinapyse Studio - Responsável pelo ETL dentro do processo , com a carga sendo feita no Pool de SQL.
+
+Pool de SQL - Responsável por armazenar os dados tratados, sendo possível realizar consultas SQL em cima. 
+
+Power BI - Iria disponibilizar a visualização desses dados.
+
+Power Automate - Seria responsável pelas automações que enviariam e-mails levando as informações solicitadas.
+
+
+Google Cloud Plataform 
+
+
+Amazon RDS Mysql - Origem dos dados
+
+Data Transfer Service- Realiza a conexão com o Amazon RDS Mysql
+
+Data Fusion - Pipeline de Dados para armazenar no Big Query Storage.
+
+Big Query Storage - Responsável por armazenar os dados.
+
+Data Fusion - Extração, transformação e carga dos dados para o Big Query
+
+Big Query - Banco de dados para consumo final
+
+Looker- Iria disponibilizar a visualização desses dados.
+
+
+
+
+Data Fusion - Pipeline de Dados para armazenar no
